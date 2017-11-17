@@ -92,8 +92,7 @@ class linkedList
 node *head, *tail;
 public :
 linkedList()
-{ head=NULL;
-  tail=NULL;}
+{ head=NUL  tail=NULL;}
 void addNode(int n)
 {node *tmp = new node;
 tmp->data=n;
@@ -157,5 +156,5 @@ int main() {
 	a.insert(pos,n1);
 	a.displayList();
 	return 0;
-}	return 0;
+
 }
