@@ -59,6 +59,22 @@ void display()
  tmp=tmp->next;
  }
 }
+void deleteNode(int n2)
+{
+            int count=0;
+            node *prev,*cur;
+	node *tmp;
+	cur=head;
+	while(count!=n2)
+	{tmp=cur;
+	prev->next=tmp;
+	cur=cur->next;
+	count++;
+	}
+	delete tmp;
+	prev->next=cur;
+	
+}
 };
 int main() {
 	int n1,pos;
@@ -67,12 +83,15 @@ int main() {
 	l.addNode(5);
 	l.addNode(7);
 	l.addNode(2);
+	l.display();
 	cout<<"\nEnter the element to be inserted.";
 	cin>>n1;
 	cout<<"\nEnter the position.";
 	cin>>pos;
 	
 	l.insertNode(2,9);
+	l.display();
+	l.deleteNode(3);
 	l.display();
 	return 0;
 }
